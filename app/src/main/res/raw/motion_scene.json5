@@ -1,0 +1,60 @@
+{
+  ConstraintSets: {
+    start: {
+      profile_pic: {
+        width: 40,
+        height: 40,
+        start: ['parent', 'start', 16],
+        top: ['parent', 'top', 16],
+        custom: {
+          background: '#FFFFFF'
+        }
+      },
+       box: {
+        width: 'spread',
+        height: 'spread',
+        start: ['parent', 'start'],
+        end: ['parent', 'end'],
+        top: ['parent', 'top'],
+        bottom: ['parent', 'bottom', -16],
+      }
+    },
+    end: {
+      profile_pic: {
+        width: 40,
+        height: 40,
+        start: ['parent', 'start'],
+        bottom: ['parent', 'bottom', 16],
+        custom: {
+          background: '#FFFFFF'
+        }
+      },
+
+      box: {
+        width: 'spread',
+        height: 'spread',
+        start: ['parent', 'start'],
+        end: ['parent', 'end'],
+        bottom: ['parent', 'bottom', 16],
+      }
+    }
+  },
+  Transitions: {
+    default: {
+      from: 'start',
+      to: 'end',
+      duration: 900,
+      onSwipe: {
+        anchor: 'profile_pic',
+        maxVelocity: 4.2,
+        maxAccel: 3,
+        direction: 'end',
+        side: 'start',
+        mode: 'velocity'
+      }
+
+    }
+  }
+
+
+}
